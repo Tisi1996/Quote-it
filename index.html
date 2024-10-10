@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote It</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quote It</h1>
+        <p>How are you feeling?</p>
+        <div class="options">
+            <button class="option" onclick="toggleFeeling('mad')">Mad</button>
+            <button class="option" onclick="toggleFeeling('bad')">Bad</button>
+            <button class="option" onclick="toggleFeeling('good')">Good</button>
+            <button class="option" onclick="toggleFeeling('in love')">In Love</button>
+            <button class="option" onclick="toggleFeeling('happy')">Happy</button>
+            <button class="option" onclick="toggleFeeling('sad')">Sad</button>
+            <button class="option" onclick="toggleFeeling('confused')">Confused</button>
+            <button class="option" onclick="toggleFeeling('excited')">Excited</button>
+            <button class="option" onclick="toggleFeeling('anxious')">Anxious</button>
+            <button class="option" onclick="toggleFeeling('bored')">Bored</button>
+            <button class="option" onclick="toggleFeeling('hopeful')">Hopeful</button>
+            <button class="option" onclick="toggleFeeling('grateful')">Grateful</button>
+            <button class="option" onclick="toggleFeeling('overwhelmed')">Overwhelmed</button>
+            <button class="option" onclick="toggleFeeling('curious')">Curious</button>
+            <button class="option" onclick="toggleFeeling('motivated')">Motivated</button>
+        </div>
+        <button id="quoteButton" onclick="generateQuote()">Get Quote</button>
+        <p id="quoteDisplay"></p>
+
+        <button id="shareButton" style="display: none;" onclick="shareOnTikTok()">Share on TikTok</button>
+        <button id="shareVideoButton" style="display: none;" onclick="shareVideo()">Share Video/Screenshot</button>
+
+        <div>
+            <label for="gptToggle">Use GPT for quote suggestions:</label>
+            <input type="checkbox" id="gptToggle" checked>
+        </div>
+
+        <button id="recordButton">Record Video</button>
+        <video id="video" width="320" height="240" autoplay></video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
